@@ -37,7 +37,6 @@
 		<maven.compiler.source>1.6</maven.compiler.source>
 		<maven.compiler.target>1.6</maven.compiler.target>
 
-		<maven-buildnumber-plugin.version>0.5-SNAPSHOT</maven-buildnumber-plugin.version>
 		<maven-deploy-plugin.version>2.6</maven-deploy-plugin.version>
 		<maven-jar-plugin.version>2.3.1</maven-jar-plugin.version>
 		<maven-javadoc-plugin.version>2.7</maven-javadoc-plugin.version>
@@ -75,26 +74,6 @@
 
 		<plugins>
 
-			<plugin>
-				<groupId>org.codehaus.mojo</groupId>
-				<artifactId>buildnumber-maven-plugin</artifactId>
-				<version>${maven-buildnumber-plugin.version}</version>
-				<executions>
-					<execution>
-						<phase>validate</phase>
-						<goals>
-							<goal>create</goal>
-						</goals>
-					</execution>
-				</executions>
-				<configuration>
-					<doCheck>false</doCheck>
-					<doUpdate>false</doUpdate>
-					<timestampPropertyName>buildTimestamp</timestampPropertyName>
-					<timestampFormat>{0,date,yyyy-MM-dd HH:mm Z}</timestampFormat>
-				</configuration>
-			</plugin>
-      
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-jar-plugin</artifactId>
